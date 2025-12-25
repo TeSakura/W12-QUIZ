@@ -20,7 +20,6 @@ class _GroceryListState extends State<GroceryList> {
   }
 
   void onCreate() async {
-    // Navigate to the form and await a new Grocery returned by Navigator.pop
     final result = await Navigator.of(
       context,
     ).push<Grocery>(MaterialPageRoute(builder: (ctx) => const NewItem()));
@@ -61,7 +60,6 @@ class GroceryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO-2 - Display groceries with an Item builder and  LIst Tile
     return ListTile(
       leading: Container(color: grocery.category.color, width: 15, height: 15),
       title: Text(grocery.name),
